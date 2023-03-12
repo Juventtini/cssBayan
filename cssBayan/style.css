@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px*/
+}
+
+body {
+    font-family: "Marko One", Georgia, serif;
+    font-size: 1.6rem;
+    height: 100%;
+    background-image: linear-gradient(to right, #642b73, #c6426e);
+}
+
+.header__title {
+    padding-top: 3rem;
+    font-size: 3.2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.main {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    color: #0059d9;
+    height: 100%;
+}
+
+.mem__item-input {
+    display: none;
+}
+
+.mems {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f6f6ee;
+}
+
+.mem__item {
+    display: block;
+    width: 100%;
+    border-top: 0.2rem solid violet;
+}
+
+.mem__item-input:checked~.mem__heading {
+    color: black;
+}
+
+.mem__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem;
+    font-size: 2rem;
+    color: #0059d9;
+    transition: all 1s ease-in-out;
+    font-weight: bold;
+}
+
+.mem__content {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.mem__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mem__image-pic {
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.mem__item-input:checked~.mem__content {
+    max-height: 100%;
+    margin-bottom: 2rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+.mem__item-input:checked~.mem__content img {
+    max-height: 100%;
+    max-width: 80%;
+    opacity: 1;
+}
+
+.mem__heading-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(./img/Plus-Icon-039jc3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mem__item:has(.mem__item-input:checked) .mem__heading-icon {
+    transform: rotate(0.12turn);
+}
+
+@media screen and (min-width: 500px) {
+    .header__title {
+        padding-top: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .mem__heading {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .main {
+        margin: 1rem;
+    }
+
+    .mems {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .header__title {
+        padding-top: 2.7rem;
+        font-size: 1.8rem;
+    }
+
+    .mem__heading {
+        padding: 1rem;
+        font-size: 1.7rem;
+    }
+
+    .main {
+        margin: 3rem;
+    }
+
+    .mems {
+        width: 85%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__title {
+        padding-top: 3.5rem;
+        font-size: 2rem;
+    }
+
+    .mem__heading {
+        padding: 1.3rem;
+        font-size: 1.9rem;
+    }
+
+    .main {
+        margin: 3rem;
+    }
+
+    .mems {
+        width: 80%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .mem__heading-icon {
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    .mem__item:hover .mem__heading-icon {
+        opacity: 1;
+        transition: all .5s ease-in-out;
+    }
+
+    .mem__item {
+        cursor: pointer;
+    }
+
+    .mems:hover .mem__heading {
+        color: black;
+    }
+
+    .mem__item:hover .mem__content {
+        max-height: 100%;
+        visibility: visible;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+
+    .mem__item:hover .mem__image-pic {
+        max-height: 100%;
+        max-width: 80%;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+}
