@@ -8,3 +8,54 @@ html {
     font-size: 62.5%;
     /* 1rem = 10px*/
 }
+
+body {
+    font-family: "Marko One", Georgia, serif;
+    font-size: 1.6rem;
+}
+
+.header {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+main {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #0059d9;
+
+}
+
+input {
+    display: none;
+}
+
+.mems {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: #f6f6ee;
+}
+
+.mem__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 0.2rem solid violet;
+    margin-bottom: 1.5rem;
+}
+
+.mem__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.mem__image img {
+    display: block;
+    width: 40rem;
+    margin: 0 auto;
+}
