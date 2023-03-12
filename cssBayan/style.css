@@ -27,7 +27,7 @@ main {
 
 }
 
-input {
+.mem__item-input {
     display: none;
 }
 
@@ -42,7 +42,14 @@ input {
     flex-direction: column;
     width: 100%;
     border-top: 0.2rem solid violet;
-    margin-bottom: 1.5rem;
+}
+
+.mem__heading {
+    color: #0059d9;
+}
+
+.mem__item-input:checked~.mem__heading {
+    color: black;
 }
 
 .mem__heading {
@@ -54,8 +61,34 @@ input {
     font-size: 2rem;
 }
 
-.mem__image img {
+.mem__content {
     display: block;
-    width: 40rem;
-    margin: 0 auto;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.mem__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mem__image img {
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.mem__item-input:checked~.mem__content {
+    max-height: 100%;
+    margin-bottom: 2rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+.mem__item-input:checked~.mem__content img {
+    max-height: 100%;
+    max-width: 80%;
+    opacity: 1;
 }
