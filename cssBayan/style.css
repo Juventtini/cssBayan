@@ -13,14 +13,17 @@ body {
     font-family: "Marko One", Georgia, serif;
     font-size: 1.6rem;
     height: 100%;
+    background-image: linear-gradient(to right, #642b73, #c6426e);
 }
 
-.header {
-    font-size: 2.2rem;
+.header__title {
+    padding-top: 3rem;
+    font-size: 3.2rem;
     text-align: center;
+    color: #fff;
 }
 
-main {
+.main {
     margin: 5rem;
     display: flex;
     flex-direction: column;
@@ -33,7 +36,7 @@ main {
 }
 
 .mems {
-    width: 75vw;
+    width: 70%;
     margin: 0 auto;
     background-color: #f6f6ee;
 }
@@ -44,9 +47,7 @@ main {
     border-top: 0.2rem solid violet;
 }
 
-.mem__heading {
-    color: #0059d9;
-}
+
 
 .mem__item-input:checked~.mem__heading {
     color: black;
@@ -57,8 +58,10 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 2.5rem;
     font-size: 2rem;
+    color: #0059d9;
+    transition: all 1s ease-in-out;
 }
 
 .mem__content {
@@ -117,11 +120,72 @@ main {
     max-height: 100%;
     visibility: visible;
     opacity: 1;
+    transition: all 1s ease-in-out;
 }
 
 .mem__item:hover .mem__image-pic {
     max-height: 100%;
     max-width: 80%;
     opacity: 1;
-    margin-bottom: 2rem;
+    transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .header__title {
+        padding-top: 2rem;
+        font-size: 1.6rem;
+    }
+
+    .mem__heading {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .main {
+        margin: 2rem;
+    }
+
+    .mems {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header__title {
+        padding-top: 2.7rem;
+        font-size: 1.8rem;
+    }
+
+    .mem__heading {
+        padding: 1rem;
+        font-size: 1.7rem;
+    }
+
+    .main {
+        margin: 3rem;
+    }
+
+    .mems {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header__title {
+        padding-top: 3.5rem;
+        font-size: 2rem;
+    }
+
+    .mem__heading {
+        padding: 1.3rem;
+        font-size: 1.9rem;
+    }
+
+    .main {
+        margin: 3rem;
+    }
+
+    .mems {
+        width: 80%;
+    }
 }
