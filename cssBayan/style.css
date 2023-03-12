@@ -60,6 +60,7 @@ body {
     font-size: 2rem;
     color: #0059d9;
     transition: all 1s ease-in-out;
+    font-weight: bold;
 }
 
 .mem__content {
